@@ -3,6 +3,25 @@ body, html {
   height: 100%;
 }
 
+/* Custom scrollbar */
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar
+{
+	width: 2px;
+  height: 2px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: rgba(0,0,0,0.5);
+}
+
 #root {
   width: 100%;
   height: 100%;
@@ -62,6 +81,7 @@ body, html {
   border-radius: 22px;
   font-size: 0.9rem;
   z-index: 500;
+  cursor: pointer;
 }
 
 .weatherRow {
@@ -85,6 +105,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  position: relative;
 }
 
 .coldBackgroundMiddle .forcastCard {
@@ -156,7 +177,13 @@ body, html {
 }
 
 .bottom-container .row .col{
-  padding-left: 15%;
+  padding-left: 13%;
+}
+
+.windDegIcon{
+  position: absolute;
+  top: 25%;
+  font-size: 0.9rem;
 }
 
 /* Modal Styles */
@@ -197,6 +224,20 @@ body, html {
   cursor: pointer;
 }
 
+.instructionContainer{
+  display: block;
+  text-align: left;
+  text-transform: none;
+  margin-top: 10px;
+}
+
+.instructionRow{
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0;
+  padding-left: 5.5%;
+}
+
 .errorRow {
   padding-left: 8%;
   color: indianred;
@@ -213,4 +254,80 @@ body, html {
 
 .show {
   display: block;
+}
+
+@media screen and (max-width: 450px) {
+  .main-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .top-container{
+    width: 100%;
+    height: 35%;
+    min-width: 0;
+  }
+
+  .top-container .main-heading{
+    text-align: center;
+    margin: 0 5px 15px;
+  }
+
+  .top-container .row.weatherRow{
+    margin: auto 10px;
+  }
+
+  .locationBtn{
+    top: 8%;
+    font-size: 1rem;
+  }
+
+  .middle-container{
+    padding: 0;
+    flex-direction: row;
+  }
+
+  .middle-container .row{
+    overflow: auto;
+    white-space: nowrap;
+    margin: 0;
+    flex-wrap: nowrap;
+  }
+
+  .middle-container .row-cols-1>* {
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 100%;
+  }
+
+  .row.weatherRow{
+    overflow: initial;
+  }
+
+  .bottom-container .row .col{
+    padding-left: 5%;
+  }
+
+  .bottom-container .text-block{
+    padding: 8px !important;
+    font-size: 0.9rem;
+  }
+
+  .bottom-container .card-title{
+    margin: 15px auto;
+  }
+
+  .windDegIcon{
+    right: 1% !important;
+  }
+
+  .mainModalRow{
+    width: 100%;
+  }
+
+  .instructionRow{
+    margin-bottom: 0;
+    padding: 5px;
+    padding-left: 7%;
+  }
 }

@@ -5,14 +5,16 @@ const {Provider} = weather;
 const apiKey = "aa2da183bb2a58d3e15fa861c16831ac";
 
 const WeatherProvider = ({children}) => {
+
   const [city, setCity] = useState("");
+  const [finalCity, setFinalCity] = useState("")
+  const [country, setCountry] = useState("");
   const [modalOpen, setModalOpen] = useState(true);
   const [loc, setLoc] = useState({
     lat: '',
     lon: ''
   });
   const [error, setError] = useState("");
-
   const [weatherData, setWeatherData] = useState({});
 
   const locUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
@@ -28,6 +30,8 @@ const WeatherProvider = ({children}) => {
           setError("");
           setModalOpen(false);
         }
+        setFinalCity(data.name);
+        setCountry(data.sys.country);
         setLoc({
           lat: data.coord.lat,
           lon: data.coord.lon
@@ -42,6 +46,7 @@ const WeatherProvider = ({children}) => {
       fetch(url)
       .then(res => res.json())
       .then(function(data) {
+        console.log('full data: ', data);
         setWeatherData(data);
       })
       .catch(err => console.log(err))
@@ -79,7 +84,8 @@ const WeatherProvider = ({children}) => {
       modalOpen,
       openModal,
       closeModal,
-      city,
+      finalCity,
+      country,
       weatherData,
       error
     }}>

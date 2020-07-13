@@ -33,7 +33,7 @@ const Bottom = (props) => {
   } else {
     return (
       <div className={value.weatherData.current.temp < 18 ? "bottom-container coldBackgroundBottom" : "bottom-container hotBackgroundBottom"}>
-        <div className="text-block" style={{padding: '15px 20px 20px 20px'}}>
+        <div className="text-block" style={{padding: '15px 20px 20px 20px', position: 'relative'}}>
           <h3 className="card-title">Details</h3>
           <div className="row">
             <div className="col">
@@ -48,7 +48,7 @@ const Bottom = (props) => {
               <i className="fas fa-tachometer-alt" style={{paddingRight: '2%'}}></i> <b>Pressure: </b> {value.weatherData.current.pressure} hPa
             </div>
             <div className="col">
-              <i className="fas fa-wind" style={{paddingRight: '2%'}}></i> <b>Wind Speed: </b> {value.weatherData.current.wind_speed} m/s
+              <i className="fas fa-wind" style={{paddingRight: '2%'}}></i> <b>Wind Speed: </b> {Math.round(value.weatherData.current.wind_speed * 10)/10} m/s <i className="fas fa-arrow-up windDegIcon" style={{transform: "rotate(" + value.weatherData.current.wind_deg + "deg)", right: value.weatherData.current.wind_deg > 180 ? "13%" : "12%"}}></i>
             </div>
           </div>
         </div>
