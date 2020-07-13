@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/weather-up/static/css/main.7e1861dd.chunk.css",
+    "main.js": "/weather-up/static/js/main.2eb3e811.chunk.js",
+    "main.js.map": "/weather-up/static/js/main.2eb3e811.chunk.js.map",
+    "runtime-main.js": "/weather-up/static/js/runtime-main.f13df66a.js",
+    "runtime-main.js.map": "/weather-up/static/js/runtime-main.f13df66a.js.map",
+    "static/js/2.8e1a3d53.chunk.js": "/weather-up/static/js/2.8e1a3d53.chunk.js",
+    "static/js/2.8e1a3d53.chunk.js.map": "/weather-up/static/js/2.8e1a3d53.chunk.js.map",
+    "index.html": "/weather-up/index.html",
+    "precache-manifest.e7398f737b96b169db32bfbbcb8ee744.js": "/weather-up/precache-manifest.e7398f737b96b169db32bfbbcb8ee744.js",
+    "service-worker.js": "/weather-up/service-worker.js",
+    "static/css/main.7e1861dd.chunk.css.map": "/weather-up/static/css/main.7e1861dd.chunk.css.map",
+    "static/js/2.8e1a3d53.chunk.js.LICENSE.txt": "/weather-up/static/js/2.8e1a3d53.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/weather-up/static/media/hot-weather.d162c772.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f13df66a.js",
+    "static/js/2.8e1a3d53.chunk.js",
+    "static/css/main.7e1861dd.chunk.css",
+    "static/js/main.2eb3e811.chunk.js"
+  ]
+}
