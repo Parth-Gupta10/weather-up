@@ -260,11 +260,13 @@ body, html {
   .main-container {
     height: 100%;
     width: 100%;
+    max-width: none;
+    max-height: none;
   }
 
   .top-container{
     width: 100%;
-    height: 35%;
+    height: 32%;
     min-width: 0;
   }
 
@@ -305,11 +307,11 @@ body, html {
   }
 
   .bottom-container .row .col{
-    padding-left: 5%;
+    padding-left: 0;
   }
 
   .bottom-container .text-block{
-    padding: 8px !important;
+    padding: 5px !important;
     font-size: 0.9rem;
   }
 
