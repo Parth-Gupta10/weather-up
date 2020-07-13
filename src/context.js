@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 const weather = React.createContext();
 const {Provider} = weather;
 
-const apiKey = "aa2da183bb2a58d3e15fa861c16831ac";
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
 const WeatherProvider = ({children}) => {
 
