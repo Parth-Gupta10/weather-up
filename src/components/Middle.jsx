@@ -8,7 +8,12 @@ const Middle = (props) => {
 
   let today = new Date();
   let daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
-  let day = today.getDay();
+
+  var nextDay = new Date(today);
+  nextDay.setDate(today.getDate()+2);
+
+  var lastDay = new Date(nextDay);
+  lastDay.setDate(nextDay.getDate()+1);
 
   if (Object.keys(value.weatherData).length === 0 || value.error !== "") {
     return (
@@ -33,7 +38,7 @@ const Middle = (props) => {
           windSpeed= {Math.round(value.weatherData.daily[1].wind_speed)}
         />
         <ForcastCard
-          heading= {daylist[day + 2]}
+          heading= {daylist[nextDay.getDay()]}
           img= {"http://openweathermap.org/img/wn/" + value.weatherData.daily[2].weather[0].icon + ".png"}
           weatherDetail= {value.weatherData.daily[2].weather[0].main}
           maxTemp= {Math.round(value.weatherData.daily[2].temp.max)}
@@ -42,7 +47,7 @@ const Middle = (props) => {
           windSpeed= {Math.round(value.weatherData.daily[2].wind_speed)}
         />
         <ForcastCard
-          heading= {daylist[day + 3]}
+          heading= {daylist[lastDay.getDay()]}
           img= {"http://openweathermap.org/img/wn/" + value.weatherData.daily[3].weather[0].icon + ".png"}
           weatherDetail= {value.weatherData.daily[3].weather[0].main}
           maxTemp= {Math.round(value.weatherData.daily[3].temp.max)}

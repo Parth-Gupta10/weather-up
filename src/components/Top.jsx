@@ -18,7 +18,7 @@ const Top = (props) => {
               </button>
           }
           <div className="row weatherRow">
-            <p>A simple app to display current weather and daily forcast for 3 days.</p>
+            <p>A simple app to display current weather and daily forecast for 3 days.</p>
           </div>
         </div>
       </div>
